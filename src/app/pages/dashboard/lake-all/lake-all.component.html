@@ -1,0 +1,55 @@
+<!-- Map Legend -->
+<app-map-key></app-map-key>
+
+
+<!-- Map -->
+<app-map
+[mapWidth]="mapWidth"
+[mapHeight]="mapHeight"
+[mapOptions]="mapOptions"
+>
+</app-map>
+
+<!-- Favorite Buoy List -->
+<div class="fbl" *ngIf="favorites.length !== 0">
+    <div class="favoriteTitle">
+        <img class="icon-buoy" src="../../../../assets/icon-buoy.svg">
+        <span id="title"> Favorites</span>  
+    </div>    
+    
+    <div class="favRectangle" *ngFor="let buoy of favorites; index as i;">
+        <span class="buoyName">{{ buoy }}</span><br>
+        <div>
+            <img class="icon-fav" id="weather" src="http://openweathermap.org/img/wn/{{ weatherInfo[i].weather[0].icon}}@2x.png">
+            <span class="buoyName">{{ weatherInfo[i].main.feels_like }}° {{ weatherInfo[i].weather[0].main }} </span>  
+            
+            <img class="icon-fav"id="temp" src="../../../../assets/icon-temp.svg">
+            <span class="buoyName">{{ weatherInfo[i].main.temp }} °F</span>  
+
+            <img class="icon-fav" id="wind" src="../../../../assets/icon-wind.svg">
+            <span class="buoyName">{{ weatherInfo[i].wind.speed }} {{ weatherDegress[i] }} </span>  
+        </div>
+        
+    </div>
+</div>
+
+<!-- Buoy of the Day Video -->
+<div class="buoyOfTheDay">
+    <div class="botd-header-ctn">
+        <img src="../../../../assets/icon-buoy.svg" class="icon-buoy">
+        <span class="botd-header">Buoy of the Day</span>
+    </div>
+
+    <div class="videoModal">
+        <h2 class="buoyName">{{ chosenBuoy }}</h2>
+        <iframe [src]="sanitize(chosenVideoLink)" frameborder="0" class="botd-video"></iframe>
+    </div>
+</div>
+
+
+<!-- About the Buoy Portal -->
+<div class="about">
+    <span class="aboutTitle">About the Buoy Portal</span>
+    <div class="rectangle"></div>
+    <p id="mainText">The Great Lakes Observing System’s Great Lakes Buoy Portal provides users with near real-time weather, wave, and water quality conditions observed in the Great Lakes. The portal also allows users to check weather and wave forecasts, and to view hazard information from the National Weather Service. Observations come from both privately- and publicly-owned buoys. Forecasts are from NOAA’s Great Lakes Environmental Research Laboratory’s, the Great Lakes Coastal Forecasting System, and the National Weather Service.</p>
+</div>

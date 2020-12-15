@@ -1,0 +1,29 @@
+<nav-top></nav-top>
+
+<div id="favpage">
+    <div class="favbuoy">
+    <span class="favtitle">Find Your Favorite Buoys</span> <span class="skip" routerLink="/buoyportal/all-lakes">Skip</span> <br>
+    <div class="rectangle"></div>   
+    </div>
+
+    <div class="info">
+        <app-map
+            [mapWidth]="mapWidth"
+            [mapHeight]="mapHeight"
+
+            >
+        </app-map>
+        <div class="nearestbuoy">
+            <img src="../../../../assets/icon-buoy.svg">
+            <span id="title">Nearest Buoys</span>
+            <span class="nBuoys" *ngFor="let buoy of nearestBuoys, index as i"><br><span id="name">{{ buoy[0] }}</span> <button (click)="addToFavorites(buoy[0])" class="favButton"></button></span>
+        <div class="favorites">
+            <img src="../../../../assets/icon-buoy.svg">
+            <span id="title">Favorites</span>
+            <p class="nBuoys" *ngFor="let buoy of favoriteBuoys, index as i"><br><span id="name">{{ buoy }}</span> <button (click)="removeFromFavorites(i)" class="removeButton"><img id="star" src="../../../../assets/icon-remove.svg"></button></p>
+        </div> 
+        </div>        
+    </div>
+</div>
+
+

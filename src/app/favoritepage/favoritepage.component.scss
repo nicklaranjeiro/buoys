@@ -1,0 +1,187 @@
+::ng-deep .map-container {
+  height: 344px !important;
+  left: 122px !important;
+  width: 40% !important;
+  display: inline-block;
+}
+
+::ng-deep google-map {
+  left: 0px !important;
+  position: unset !important;
+}
+
+.favtitle {
+  width: 249px;
+  height: 27px;
+  margin: 64px 20px 8px 122px;
+  font-family: NotoSans;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--Charcoal);
+}
+
+.favbuoy {
+  margin-top: 128px;
+}
+
+.rectangle {
+  width: 120px;
+  height: 4px;
+  padding-right: 120px;
+  margin: 8px 260px 24px 122px;
+  background-image: linear-gradient(to left, #3997b5, #2979ff);
+}
+
+.skip {
+  width: 28px;
+  height: 19px;
+  float: right;
+  margin-right: 122px;
+  font-family: NotoSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--Charcoal);
+  cursor: pointer;
+}
+
+.nearestbuoy {
+  width: 30%;
+  height: 208px;
+  float: right;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 122px;
+  margin-left: 122px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--White);
+}
+
+.favorites {
+  width: 108%;
+  padding: 32px 16px 50px 16px;
+  margin-left: -10px;
+  margin-top: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--White);
+}
+
+.info {
+  height: auto;
+}
+
+#title {
+  width: 24px;
+  height: 24px;
+  vertical-align: super;
+  margin-bottom: 20px;
+}
+
+.nBuoys {
+  font-family: NotoSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--Charcoal);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.favButton {
+  padding: 10px 26px;
+  border-radius: 16px;
+  border: solid 1.5px #3b5795;
+  background-color: var(--White);
+  float: right;
+  vertical-align: -webkit-baseline-middle;
+  outline: none;
+  cursor: pointer;
+  background-image: url("/assets/icon-favorite-empty.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.favButton:active {
+  background-color: var(--dark-blue);
+  background-image: url("/assets/icon-favorite-filled.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.removeButton {
+  padding: 4px 20px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--White);
+  float: right;
+  vertical-align: -webkit-baseline-middle;
+}
+
+#name {
+  float: left;
+  width: 100%;
+}
+
+#star {
+  width: 16px;
+  height: 16px;
+}
+
+#favpage {
+  display: flow-root;
+}
+
+@media only screen and (max-width: 807px) {
+  ::ng-deep .map-container {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .nearestbuoy {
+    margin: auto;
+    margin-top: 30px;
+    float: unset;
+    width: 90%;
+  }
+
+  .favorites {
+    width: 100%;
+  }
+
+  .favbuoy {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .favtitle,
+  .rectangle,
+  .skip {
+    margin: 0;
+  }
+
+  .skip {
+    margin-right: 16px;
+  }
+
+  .favtitle,
+  .rectangle {
+    margin-left: 16px;
+  }
+}

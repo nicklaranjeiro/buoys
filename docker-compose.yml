@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgresql:
+    image: postgres
+    container_name: pg-glos
+    ports:
+      - "5300:5432"
+    environment:
+      - POSTGRES_USER=rai
+      - POSTGRES_PASSWORD=test
+    volumes:
+       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    restart: always

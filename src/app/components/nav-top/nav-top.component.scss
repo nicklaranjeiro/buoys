@@ -1,0 +1,152 @@
+.nav-header {
+    width: 100%;
+    height: 72px;
+    padding: 0px 40px;
+    z-index: 4;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
+}
+
+.nav-home {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.header-great-lakes {
+    margin-right: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.header-buoy-portal {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--turquoise);
+}
+
+.profile-ctn {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu-btn-container:hover {
+    background-color: var(--light-gray);
+}
+
+.menu-btn {
+    border-radius: 50%;
+}
+
+.create-profile-btn {
+    display: none;
+}
+
+.login-btn {
+    display: none;
+}
+
+.logout-btn {
+display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-header {
+        padding: 0px 40px;
+        z-index: 10;
+    }
+
+    .menu-btn-container {
+        display: none;
+    }
+    .menu-btn {
+        display: none;
+    }
+
+    .create-profile-btn {
+        height: 32px;
+        margin-right: 16px;
+        padding: 0px 24px;
+        display: block;
+
+        font-size: 14px;
+        color: var(--turquoise);
+
+        background-color: var(--white);
+        border: solid 1px var(--turquoise);
+        border-radius: 100px;
+
+        cursor: pointer;
+        outline: none;
+    }
+
+    .login-btn {
+        height: 32px;
+        padding: 0px 24px;
+        display: block;
+
+        font-size: 14px;
+        color: var(--white);
+
+        background-color: var(--dark-blue);
+        border: none;
+        border-radius: 100px;
+
+        cursor: pointer;
+        outline: none;
+    }
+
+    .create-profile-btn:hover {
+        color: var(--white);
+        background-color: var(--turquoise);
+    }
+
+    .login-btn:hover {
+        background-color: var(--cobalt);
+    }
+
+    .logout-btn {
+        display: flex;
+        align-items: center;
+    
+        height: 32px;
+        line-height: 1;
+    
+        font-size: 14px;
+        background-color: transparent;
+        color: var(--charcoal);
+    
+        border: none;
+    
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .nav-header {
+        padding: 0 40px 0 104px;
+    }
+}

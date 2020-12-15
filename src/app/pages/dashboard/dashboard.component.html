@@ -1,0 +1,60 @@
+<nav-top></nav-top>
+
+<nav class="nav-side-ctn">
+    <div class="nav-items-ctn">
+
+        <div class="nav-top-section">
+            <div class="nav-links-profile-ctn">
+                <a routerLink="/register" *ngIf="!isLoggedIn" class="nav-link-profile">Create Profile</a>
+                <a routerLink="/login" *ngIf="!isLoggedIn" class="nav-link-profile">Login</a>
+                <a routerLink="/buoyportal/all-lakes" *ngIf="isLoggedIn" class="logout-btn" (click)="logoutUser()"><img src="../assets/icon-logout.svg" class="icon-logout">Logout</a>
+            </div>
+            <img src="../assets/icon-close.svg" alt="Close" class="close-menu">
+        </div>
+
+
+        <a routerLink="/buoyportal/all-lakes" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-all.svg" alt="All">
+            <p class="nav-link-header">All</p>
+        </a>
+
+        <a routerLink="/buoyportal/lake-erie" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-erie.svg" alt="Lake Erie">
+            <p class="nav-link-header">Lake Erie</p>
+        </a>
+
+        <a routerLink="/buoyportal/lake-huron" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-huron.svg" alt="Lake Huron">
+            <p class="nav-link-header">Lake Huron</p>
+        </a>
+
+        <a routerLink="/buoyportal/lake-michigan" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-michigan.svg" alt="Lake Michigan">
+            <p class="nav-link-header">Lake Michigan</p>
+        </a>
+
+        <a routerLink="/buoyportal/lake-ontario" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-ontario.svg" alt="Lake Ontario">
+            <p class="nav-link-header">Lake Ontario</p>
+        </a>
+
+        <a routerLink="/buoyportal/lake-superior" class="nav-link">
+            <img class="nav-link-icon" src="../assets/icon-lake-superior.svg" alt="Lake Superior">
+            <p class="nav-link-header">Lake Superior</p>
+        </a>
+
+        <div class="line-seperator"></div>
+
+        <div class="nav-links-individual-buoys">
+            <a routerLink="/buoyportal/45147" class="nav-link-buoy">Lake St. Claire</a>
+            <a routerLink="/buoyportal/45166" class="nav-link-buoy">Lake Champlain</a>
+            <a routerLink="/buoyportal/UMBIO" class="nav-link-buoy">UM-BIO</a>
+        </div>
+
+    </div>
+    <img class="waves-img" src="../assets/waves.svg">
+</nav>
+
+<div class="dashboard-ctn">
+    <router-outlet></router-outlet>
+</div>

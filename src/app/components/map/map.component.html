@@ -1,0 +1,15 @@
+<google-map
+    width="100%"
+    [height]="mapHeight"
+    [options]="mapOptions"
+>
+    <map-marker
+        *ngFor="let buoy of allBuoys, index as i"
+        [position]="buoy.position"
+        [title]="buoy.title"
+        [options]="buoy.options"
+        (mapClick)="routeToBuoy(buoy)"
+    >
+    </map-marker>
+
+</google-map>

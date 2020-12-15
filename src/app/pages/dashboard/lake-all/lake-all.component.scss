@@ -1,0 +1,109 @@
+// Buoy of the Day Video
+.buoyOfTheDay {
+  margin-top: 40px;
+  margin-left: 48px;
+  padding-right: 104px;
+}
+
+.botd-header-ctn,
+.favoriteTitle {
+  display: flex;
+  align-items: center;
+}
+
+.botd-header {
+  font-size: 16px;
+  color: var(--charcoal);
+}
+
+.icon-buoy {
+  margin-right: 8px;
+  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg)
+    brightness(83%) contrast(83%);
+}
+
+.videoModal {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.buoyName {
+  font-size: 16px;
+  margin: 16px 0;
+  margin-right: 10%;
+  margin-left: 10px;
+  color: var(--charcoal);
+  vertical-align: super;
+}
+
+.botd-video {
+  width: 100%;
+  height: 600px;
+}
+
+// Bottom Paragraph Section
+.about {
+  margin-top: 40px;
+  margin-left: 48px;
+  margin-bottom: 56px;
+  padding-right: 104px;
+}
+
+.aboutTitle {
+  font-size: 18px;
+  color: var(--Charcoal);
+}
+
+.rectangle {
+  width: 60px;
+  height: 4px;
+  margin: 8px 0 16px 0;
+  background-image: linear-gradient(to left, var(--turquoise), var(--cobalt));
+}
+
+#mainText {
+  font-size: 14px;
+  color: var(--Charcoal);
+}
+
+.fbl {
+  margin: 40px 100px 40px 40px;
+}
+
+.favRectangle {
+  width: 100%;
+  height: 86px;
+  margin: 16px 0 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--White);
+}
+
+.icon-fav {
+  width: 30px;
+  height: 30px;
+}
+
+#weather {
+  background-color: #333333;
+  border-radius: 60%;
+}
+
+#temp {
+  background-color: #fbc02d;
+  border-radius: 60%;
+}
+
+#wind {
+  background-color: #3997b5;
+  border-radius: 60%;
+}
+
+::ng-deep .map-container {
+  width: 100% !important;
+  left: 0 !important;
+  height: 544px !important;
+}

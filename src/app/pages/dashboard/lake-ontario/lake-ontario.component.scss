@@ -1,0 +1,74 @@
+// Buoy Selector Section
+.buoys {
+  padding: 16px 48px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.buoyid {
+  font-size: 14px;
+  color: var(--Charcoal);
+}
+
+.table-cells {
+  padding: 0 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.table-cells:hover {
+  background-color: var(--light-gray);
+}
+
+.lakeTitle {
+  display: flex;
+  align-items: center;
+  // margin-left: 48px;
+  font-size: 18px;
+  color: var(--Charcoal);
+}
+
+// table {
+
+// }
+
+#icon-buoy {
+  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg) brightness(83%) contrast(83%);
+}
+
+#title {
+  margin-left: 16px;
+}
+
+
+
+// Bottom Paragraph Section
+.about {
+  margin-left: 48px;
+  margin-bottom: 56px;
+  padding-right: 104px;
+}
+
+.aboutTitle {
+  font-size: 18px;
+  color: var(--Charcoal);
+}
+
+.rectangle {
+  width: 60px;
+  height: 4px;
+  margin: 8px 0 16px 0;
+  background-image: linear-gradient(
+    to left,
+    var(--turquoise),
+    var(--cobalt)
+  );
+}
+
+#mainText {
+  font-size: 14px;
+  color: var(--Charcoal);
+}
