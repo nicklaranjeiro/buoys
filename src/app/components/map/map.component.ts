@@ -62,7 +62,7 @@ export class MapComponent implements OnInit {
         buoy.title = buoy.id
         // Set custom icon and animation
         buoy.options = {
-          icon: buoy.recovered ? '../assets/icon-buoy-recovered.svg' : '../assets/icon-buoy-active.svg',
+          icon: buoy.recovered ? 'assets/icon-buoy-recovered.svg' : 'assets/icon-buoy-active.svg',
           animation: google.maps.Animation.DROP
         }
       });

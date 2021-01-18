@@ -34,8 +34,8 @@
 
         <!-- Favorite Button -->
         <div [ngClass]="{'fav-button': true, 'is-filled': isFavorite(currentBuoy.id)}" (click)="toggleFavorite(currentBuoy.id)">
-          <img src="../assets/icon-favorite-empty.svg" class="icon-favorite" *ngIf="!isFavorite(currentBuoy.id)" />
-          <img src="../assets/icon-favorite-filled.svg" class="icon-favorite" *ngIf="isFavorite(currentBuoy.id)" />
+          <img src="assets/icon-favorite-empty.svg" class="icon-favorite" *ngIf="!isFavorite(currentBuoy.id)" />
+          <img src="assets/icon-favorite-filled.svg" class="icon-favorite" *ngIf="isFavorite(currentBuoy.id)" />
         </div>
 
       </div>
@@ -56,28 +56,28 @@
       <h3 class="container-title">These Conditions are Good For</h3>
 
       <div class="recreation-items-container">
-        <img class="icon-conditions" src="../assets/icon-swimming.svg" alt="Swimming">
+        <img class="icon-conditions" src="assets/icon-swimming.svg" alt="Swimming">
         <h3 class="recreation-title">Swimming</h3>
         <p *ngIf="swimConditions()">conditions are great for a swim</p>
         <p *ngIf="!swimConditions()">conditions aren't very good right now</p>
       </div>
 
       <div class="recreation-items-container" >
-        <img class="icon-conditions" src="../assets/icon-kayaking.svg" alt="Kayaking"> 
+        <img class="icon-conditions" src="assets/icon-kayaking.svg" alt="Kayaking"> 
         <h3 class="recreation-title">Kayaking</h3>
         <p *ngIf="kayakConditions()">good time for kayaking!</p>
         <p *ngIf="!kayakConditions()">today doesn't look good</p>
       </div>
 
       <div class="recreation-items-container">
-        <img class="icon-conditions" src="../assets/icon-fishing.svg" alt="Fishing">
+        <img class="icon-conditions" src="assets/icon-fishing.svg" alt="Fishing">
         <h3 class="recreation-title">Fishing</h3>
         <p *ngIf="fishingConditions()">looks good, hope you catch something!</p>
         <p *ngIf="!fishingConditions()">not looking good for today</p>
       </div>
 
       <div class="recreation-items-container">
-        <img class="icon-conditions" src="../assets/icon-boating.svg" alt="Boating">
+        <img class="icon-conditions" src="assets/icon-boating.svg" alt="Boating">
         <h3 class="recreation-title">Boating</h3>
         <p *ngIf="boatingConditions()">conditions are good</p>
         <p *ngIf="!boatingConditions()">it's too choppy today</p>
