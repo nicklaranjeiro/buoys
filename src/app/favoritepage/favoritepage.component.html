@@ -23,7 +23,7 @@
             <div class="nearest-buoy">
                 <div class="nearest-buoys-ctn">
                     <div class="nBuys-header">
-                        <img class="icon-buoy" src="../../../assets/icon-buoy.svg">
+                        <img class="icon-buoy" src="assets/icon-buoy.svg">
                         <h3 class="buoy-title">Nearest Buoys</h3>
                     </div>
                     <div class="nBuoys" *ngFor="let buoy of nearestBuoys, index as i">
@@ -36,13 +36,13 @@
             <div class="favorited-buoy">
                 <div class="favorited-buoys-ctn">
                     <div class="nBuys-header">
-                        <img class="icon-buoy" src="../../../assets/icon-buoy.svg">
+                        <img class="icon-buoy" src="assets/icon-buoy.svg">
                         <h3 class="buoy-title">Favorites</h3>
                     </div>
                     <div class="nBuoys" *ngFor="let buoy of favoriteBuoys, index as i">
                         <h3 class="buoy-name">{{ buoy }}</h3>
                         <div class="remove-btn" (click)="removeFromFavorites(i)">
-                            <img src="../../../assets/icon-remove.svg" alt="Remove">
+                            <img src="assets/icon-remove.svg" alt="Remove">
                         </div>
                     </div>
                 </div>
