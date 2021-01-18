@@ -10,6 +10,6 @@
         </div> -->
         <button class="create-profile-btn" routerLink="/register" *ngIf="!isLoggedIn">Create Profile</button>
         <button class="login-btn" routerLink="/login" *ngIf="!isLoggedIn">Login</button>
-        <button class="logout-btn" routerLink="/buoyportal/all-lakes" *ngIf="isLoggedIn" (click)="logoutUser()"><img src="assets/icon-logout.svg" class="icon-logout">Logout</button>
+        <button class="logout-btn" routerLink="buoys/buoyportal/all-lakes" *ngIf="isLoggedIn" (click)="logoutUser()"><img src="assets/icon-logout.svg" class="icon-logout">Logout</button>
     </div>
 </nav>
