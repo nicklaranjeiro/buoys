@@ -24,12 +24,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/buoyportal',
+    redirectTo: '/buoyportal/all-lakes',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/buoyportal',
+    redirectTo: '/buoyportal/all-lakes',
     pathMatch: 'full'
   }
 ];

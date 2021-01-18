@@ -17,7 +17,8 @@ export class RegisterpageComponent implements OnInit {
     // If we're using ZIP for finding recommended buoys, we'll need to create variable on localStorage
     // window.localStorage.setItem('greatLakes_zipCode', '')
     // Create favorite buoys in localStorage
-    window.localStorage.setItem('greatLakes_favBuoys', '')
+    window.localStorage.setItem('greatLakes_favBuoys', '');
+    window.localStorage.setItem('greatLakes_isLoggedIn', 'true');
     // Redirect user to favorite buoy screen
     this.router.navigateByUrl(`/favorite`);
   }

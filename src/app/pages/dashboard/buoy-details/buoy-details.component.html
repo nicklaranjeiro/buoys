@@ -1,17 +1,21 @@
 <div class="buoy-page">
   <div class="buoy-page-top">
 
+    <!-- Map Section -->
     <div class="map-section">
       <app-map
       [mapWidth]="mapWidth"
       [mapHeight]="mapHeight"
       [mapOptions]="mapOptions"
       >
-    </app-map>
+      </app-map>
     </div>
 
+    <!-- Header Section -->
     <div class="header-section">
-      <div class="buoy-header">
+      <div class="header-weather-favorite">
+
+        <!-- Weather Widget -->
         <div class="weather-widget" *ngIf="weatherForecast">
           <img
             class="weather-item weather-icon"
@@ -28,6 +32,7 @@
           </p>
         </div>
 
+        <!-- Favorite Button -->
         <div [ngClass]="{'fav-button': true, 'is-filled': isFavorite(currentBuoy.id)}" (click)="toggleFavorite(currentBuoy.id)">
           <img src="../assets/icon-favorite-empty.svg" class="icon-favorite" *ngIf="!isFavorite(currentBuoy.id)" />
           <img src="../assets/icon-favorite-filled.svg" class="icon-favorite" *ngIf="isFavorite(currentBuoy.id)" />
@@ -35,50 +40,68 @@
 
       </div>
 
+      <!-- Buoy Title and ID -->
       <div class="buoy-title-section" *ngIf="buoyInformation">
         <h2 class="buoy-title">{{ currentBuoy.longName | uppercase }}</h2>
         <p class="buoy-number">({{ currentBuoy.id }})</p>
       </div>
     </div>
-  </div>
-  <div class="recreation-container container" *ngIf="buoyInformation">
-    <h3 class="container-title">These Conditions are Good For</h3>
-
-    <div class="recreation-items-container information-container">
-      <img class="recreation-icon" src="../assets/icon-swimming.svg" alt="Swimming"> Swimming
-    </div>
-    <div class="recreation-items-container information-container">
-      <img class="recreation-icon" src="../assets/icon-kayaking.svg" alt="Kayaking"> Kayaking
-    </div>
-
-    <div class="recreation-items-container information-container">
-      <img class="recreation-icon" src="../assets/icon-fishing.svg" alt="Fishing"> Fishing
-    </div>
-
-    <div class="recreation-items-container information-container">
-      <img class="recreation-icon" src="../assets/icon-boating.svg" alt="Boating"> Boating
-    </div>
-
-    <div class="recreation-items-container information-container">
-      <img src="../assets/icon-boating.svg" alt="Boating" class="icon-conditions">
-      Boating
-    </div>
 
   </div>
 
-  <div class="video-container container">
-    <div class="information-container">
-      <p>looping video</p>
+  <div class="buoy-page-bottom">
+
+    <!-- Conditions are Good For Section -->
+    <div class="recreation-container">
+      <h3 class="container-title">These Conditions are Good For</h3>
+
+      <div class="recreation-items-container">
+        <img class="icon-conditions" src="../assets/icon-swimming.svg" alt="Swimming">
+        <h3 class="recreation-title">Swimming</h3>
+        <p *ngIf="swimConditions()">conditions are great for a swim</p>
+        <p *ngIf="!swimConditions()">conditions aren't very good right now</p>
+      </div>
+
+      <div class="recreation-items-container" >
+        <img class="icon-conditions" src="../assets/icon-kayaking.svg" alt="Kayaking"> 
+        <h3 class="recreation-title">Kayaking</h3>
+        <p *ngIf="kayakConditions()">good time for kayaking!</p>
+        <p *ngIf="!kayakConditions()">today doesn't look good</p>
+      </div>
+
+      <div class="recreation-items-container">
+        <img class="icon-conditions" src="../assets/icon-fishing.svg" alt="Fishing">
+        <h3 class="recreation-title">Fishing</h3>
+        <p *ngIf="fishingConditions()">looks good, hope you catch something!</p>
+        <p *ngIf="!fishingConditions()">not looking good for today</p>
+      </div>
+
+      <div class="recreation-items-container">
+        <img class="icon-conditions" src="../assets/icon-boating.svg" alt="Boating">
+        <h3 class="recreation-title">Boating</h3>
+        <p *ngIf="boatingConditions()">conditions are good</p>
+        <p *ngIf="!boatingConditions()">it's too choppy today</p>
+      </div>
     </div>
-  </div>
-  <div class="buoy-info-container container" *ngIf="buoyInformation">
-    <h2 class="info-title">Buoy Info</h2>
-    <div class="rectangle"></div>
-    <p class="buoy-details" [innerHTML]="currentBuoy.buoyInfo"></p>
+
+
+    <!-- Video Section -->
+    <div class="video-container" *ngIf="webcamStream">
+      <iframe [src]="sanitize(webcamStream)" frameborder="0" class="botd-video"></iframe>
+    </div>
+
+    <!-- About this Buoy Section -->
+    <div class="buoy-info-container" *ngIf="buoyInformation">
+      <h2 class="info-title">Buoy Info</h2>
+      <div class="rectangle"></div>
+      <p class="buoy-details" [innerHTML]="currentBuoy.buoyInfo"></p>
+    </div>
+
+    <!-- Access Buoy Details w/SMS -->
+    <div class="access-details">
+      <p>SMS: Text 45175 toll free to <a href="tel:866-218-9973">866-218-9973</a> for latest observations.</p>
+      <p>GLOS <a href="http://data.glos.us/metadata/srv/eng/main.home">Data Portal</a>: Access more data, models, and create alerts.</p>
   </div>
 
-  <div class="access-details">
-    <p>SMS: Text 45175 toll free to <a href="tel:866-218-9973">866-218-9973</a> for latest observations.</p>
-    <p>GLOS <a href="http://data.glos.us/metadata/srv/eng/main.home">Data Portal</a>: Access more data, models, and create alerts.</p>
-  </div>
+
 </div>

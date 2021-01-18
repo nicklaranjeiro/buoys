@@ -31,4 +31,5 @@ export class NavTopComponent implements OnInit {
   //   const sideNav = document.querySelector('.nav-side-ctn');
   //   sideNav.style.display = 'block';
   // }
+
 }

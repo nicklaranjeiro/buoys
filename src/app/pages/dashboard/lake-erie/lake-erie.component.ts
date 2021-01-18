@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GlosService } from '../../../services/glos.service'
 
 @Component({
@@ -30,7 +31,7 @@ export class LakeErieComponent implements OnInit {
     disableDefaultUI: true,
   };
 
-  constructor(private glosService: GlosService) { }
+  constructor(private glosService: GlosService, private router: Router) { }
   
   buoys;
   filteredBuoys = [];
@@ -61,5 +62,9 @@ export class LakeErieComponent implements OnInit {
 
   titleChange(name){
     document.getElementById("title").innerHTML = name;
+  }
+
+  routeToBuoy(buoy){
+    this.router.navigateByUrl(`/buoyportal/${buoy.id}`);
   }
 }

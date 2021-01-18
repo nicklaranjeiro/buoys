@@ -1,0 +1,42 @@
+<div class="fav-buoy-container">
+  <h3 class="title">Mackinac Straits West</h3>
+  <div class="buoy-details">
+    <div class="info-container" *ngIf="weatherForecast">
+      <img
+        class="weather-icon icon"
+        src="../assets/icon-weather-sunny.svg"
+        alt="sunny"
+      />
+      <p class="weather-item">
+        {{ weatherForecast.current.temp | number: "1.0-0" }}<span>&#176;</span>
+      </p>
+      <p class="weather-item">
+        {{ weatherForecast.current.weather[0].description | titlecase }}
+      </p>
+    </div>
+    <div class="info-container">
+      <img
+        class="temp-icon icon"
+        src="assets/icon-temp.svg"
+        alt="water temperature"
+      />
+      <p>water temp</p>
+    </div>
+    <div class="info-container">
+      <img
+        class="wave-icon icon"
+        src="assets/icon-waves.svg"
+        alt="wave height"
+      />
+      <p>wave height</p>
+    </div>
+    <div class="info-container">
+      <img
+        class="wind-icon icon"
+        src="assets/icon-wind.svg"
+        alt="wind speed"
+      />
+      <p>wind speed</p>
+    </div>
+  </div>
+</div>

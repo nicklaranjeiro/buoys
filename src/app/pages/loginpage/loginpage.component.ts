@@ -20,6 +20,4 @@ export class LoginpageComponent implements OnInit {
     this.router.navigateByUrl(`/buoyportal/all-lakes`);
   }
 
-
-
 }

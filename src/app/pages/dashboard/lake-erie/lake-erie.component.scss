@@ -1,16 +1,25 @@
 // Buoy Selector Section
 .buoys {
-  padding: 16px 48px;
+  padding: 16px 10px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
   background-color: var(--white);
-  display: flex;
-  justify-content: space-between;
+  display: block;
   margin-bottom: 40px;
 }
 
-.buoyid {
-  font-size: 14px;
+.lakeTitle {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
   color: var(--Charcoal);
+}
+
+#icon-buoy {
+  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg) brightness(83%) contrast(83%);
+}
+
+#title {
+  margin-left: 16px;
 }
 
 .table-cells {
@@ -23,27 +32,10 @@
   background-color: var(--light-gray);
 }
 
-.lakeTitle {
-  display: flex;
-  align-items: center;
-  // margin-left: 48px;
-  font-size: 18px;
+.buoyid {
+  font-size: 14px;
   color: var(--Charcoal);
 }
-
-// table {
-
-// }
-
-#icon-buoy {
-  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg) brightness(83%) contrast(83%);
-}
-
-#title {
-  margin-left: 16px;
-}
-
-
 
 // Bottom Paragraph Section
 .about {
@@ -71,4 +63,39 @@
 #mainText {
   font-size: 14px;
   color: var(--Charcoal);
+}
+
+
+@media screen and (min-width: 600px){
+  .buoys {
+    padding: 16px 48px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--white);
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .lakeTitle {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--Charcoal);
+  }
+
+  table {
+    margin-top: 16px;
+  }
+}
+
+
+@media screen and (min-width: 972px){
+  .buoys {
+    padding: 16px 48px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
 }

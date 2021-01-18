@@ -1,29 +1,56 @@
 <nav-top></nav-top>
 
 <div id="favpage">
-    <div class="favbuoy">
-    <span class="favtitle">Find Your Favorite Buoys</span> <span class="skip" routerLink="/buoyportal/all-lakes">Skip</span> <br>
-    <div class="rectangle"></div>   
+    <div class="fav-page-top-section">
+        <div class="headline">
+            <h2 class="headline-title">Find Your Favorite Buoys</h2>
+            <div class="headline-underline"></div>
+        </div>
+        <h4 class="skip-btn" (click)="routeToHome()">Skip</h4>
     </div>
 
-    <div class="info">
-        <app-map
+    <div class="fav-page-bottom-section">
+        <!-- Map Section -->
+        <div class="map-ctn">
+            <app-map
             [mapWidth]="mapWidth"
             [mapHeight]="mapHeight"
+            [mapOptions]="mapOptions">
+            </app-map>
+        </div>
 
-            >
-        </app-map>
-        <div class="nearestbuoy">
-            <img src="../../../../assets/icon-buoy.svg">
-            <span id="title">Nearest Buoys</span>
-            <span class="nBuoys" *ngFor="let buoy of nearestBuoys, index as i"><br><span id="name">{{ buoy[0] }}</span> <button (click)="addToFavorites(buoy[0])" class="favButton"></button></span>
-        <div class="favorites">
-            <img src="../../../../assets/icon-buoy.svg">
-            <span id="title">Favorites</span>
-            <p class="nBuoys" *ngFor="let buoy of favoriteBuoys, index as i"><br><span id="name">{{ buoy }}</span> <button (click)="removeFromFavorites(i)" class="removeButton"><img id="star" src="../../../../assets/icon-remove.svg"></button></p>
-        </div> 
-        </div>        
+        <div class="buoy-favorite-info-ctn">
+            <div class="nearest-buoy">
+                <div class="nearest-buoys-ctn">
+                    <div class="nBuys-header">
+                        <img class="icon-buoy" src="../../../../assets/icon-buoy.svg">
+                        <h3 class="buoy-title">Nearest Buoys</h3>
+                    </div>
+                    <div class="nBuoys" *ngFor="let buoy of nearestBuoys, index as i">
+                        <h3 class="buoy-name">{{ buoy[0] }}</h3>
+                        <button class="favButton" (click)="addToFavorites(buoy[0])"><img src="assets/icon-favorite-filled.svg" id="fav-icon"></button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="favorited-buoy">
+                <div class="favorited-buoys-ctn">
+                    <div class="nBuys-header">
+                        <img class="icon-buoy" src="../../../../assets/icon-buoy.svg">
+                        <h3 class="buoy-title">Favorites</h3>
+                    </div>
+                    <div class="nBuoys" *ngFor="let buoy of favoriteBuoys, index as i">
+                        <h3 class="buoy-name">{{ buoy }}</h3>
+                        <div class="remove-btn" (click)="removeFromFavorites(i)">
+                            <img src="../../../../assets/icon-remove.svg" alt="Remove">
+                        </div>
+                    </div>
+                </div>
+                <button class="finishbutton" (click)="routeToHome()">Finish</button>
+            </div>
+        </div>
+
+
     </div>
+    
 </div>
-
-

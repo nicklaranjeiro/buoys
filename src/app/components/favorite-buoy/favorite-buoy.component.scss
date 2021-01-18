@@ -1,0 +1,63 @@
+.fav-buoy-container {
+    width: 80%;
+    height: 183px;
+    margin: 8px 16px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--White);
+    color: var(--charcoal);
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 4px 0 0;
+    padding: 4px;
+    margin-right: 5px;
+}
+
+.weather-icon {
+    background-color: var(--charcoal);
+}
+
+.temp-icon {
+    background-color: var(--gold);
+}
+
+.wave-icon {
+    background-color: var(--cobalt);
+}
+
+.wind-icon {
+    background-color: var(--turquoise);
+}
+
+@media screen and (min-width: 768px) {
+    .fav-buoy-container {
+        width: 60%;
+        height: 86px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    .buoy-details {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

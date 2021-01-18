@@ -10,28 +10,32 @@
 >
 </app-map>
 
-<!-- Favorite Buoy List -->
-<div class="fbl" *ngIf="favorites.length !== 0">
+<!-- Favorite Buoy Section -->
+<div class="fbl" *ngIf="isLoggedIn && favorites && favorites.length !== 0">
     <div class="favoriteTitle">
         <img class="icon-buoy" src="../../../../assets/icon-buoy.svg">
-        <span id="title"> Favorites</span>  
+        <span id="favorite-title">Favorites</span>  
     </div>    
     
-    <div class="favRectangle" *ngFor="let buoy of favorites; index as i;">
-        <span class="buoyName">{{ buoy }}</span><br>
-        <div>
-            <img class="icon-fav" id="weather" src="http://openweathermap.org/img/wn/{{ weatherInfo[i].weather[0].icon}}@2x.png">
-            <span class="buoyName">{{ weatherInfo[i].main.feels_like }}° {{ weatherInfo[i].weather[0].main }} </span>  
+    <div class="favRectangle" *ngFor="let buoy of favorites; index as i;" (click)="routeToBuoy(buoy)">
+        <h3 class="buoyName">{{ buoy }}</h3>
+        <div class="buoyInformation-ctn">
+            <div class="weather-info-ctn">
+                <img class="icon-buoy-info" id="weather" src="http://openweathermap.org/img/wn/{{ weatherInfo[i].weather[0].icon}}@2x.png">
+                <h4 class="buoyName">{{ weatherInfo[i].main.feels_like }}° {{ weatherInfo[i].weather[0].main }}</h4>
+            </div>
+            <div class="temp-info-ctn">
+                <div class="temp-icon-ctn">
+                    <img class="icon-buoy-info" id="temp" src="../../../../assets/icon-temp.svg">
+                </div>
+                <h4 class="buoyName">{{ weatherInfo[i].main.temp }} °F</h4>
+            </div>
             
-            <img class="icon-fav"id="temp" src="../../../../assets/icon-temp.svg">
-            <span class="buoyName">{{ weatherInfo[i].main.temp }} °F</span>  
-
-            <img class="icon-fav" id="wind" src="../../../../assets/icon-wind.svg">
-            <span class="buoyName">{{ weatherInfo[i].wind.speed }} {{ weatherDegress[i] }} </span>  
         </div>
         
     </div>
 </div>
+
 
 <!-- Buoy of the Day Video -->
 <div class="buoyOfTheDay">
@@ -51,5 +55,6 @@
 <div class="about">
     <span class="aboutTitle">About the Buoy Portal</span>
     <div class="rectangle"></div>
-    <p id="mainText">The Great Lakes Observing System’s Great Lakes Buoy Portal provides users with near real-time weather, wave, and water quality conditions observed in the Great Lakes. The portal also allows users to check weather and wave forecasts, and to view hazard information from the National Weather Service. Observations come from both privately- and publicly-owned buoys. Forecasts are from NOAA’s Great Lakes Environmental Research Laboratory’s, the Great Lakes Coastal Forecasting System, and the National Weather Service.</p>
+    <p id="mainText">The Great Lakes Observing System’s Great Lakes Buoy Portal provides users with near real-time weather, wave, and water quality conditions observed in the Great Lakes. The portal also allows users to check weather and wave forecasts, and to view hazard information from the National Weather Service. Observations come from both privately- and publicly-owned buoys. Forecasts are from NOAA’s <a href="https://www.glerl.noaa.gov/"> Great Lakes Environmental Research Laboratory’s</a>, the <a href="https://www.glerl.noaa.gov/res/glcfs/">Great Lakes Coastal Forecasting System</a>, and <a href="http://www.weather.gov/">the National Weather Service.</a></p>
 </div>
+

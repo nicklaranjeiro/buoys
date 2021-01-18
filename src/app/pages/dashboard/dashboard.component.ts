@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   isLoggedIn: string = window.localStorage.getItem('greatLakes_isLoggedIn');
+  menuIsOpen = false;
 
   constructor(private router: Router) { }
 
@@ -22,8 +23,18 @@ export class DashboardComponent implements OnInit {
     window.location.href = '/buoyportal/all-lakes';
   }
 
+  toggleMenu = () => {
+    this.menuIsOpen = !this.menuIsOpen;
+    console.log(this.menuIsOpen);
+  }
+
+  routeToBuoy(buoy){
+    window.location.href = `/buoyportal/${buoy}`;
+  }
+
   // closeMenu = () => {
   //   const sideNav = document.querySelector('.nav-side-ctn');
   //   sideNav.style.display = 'none';
   // }
+
 }

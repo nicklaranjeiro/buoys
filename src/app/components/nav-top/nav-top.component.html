@@ -5,9 +5,9 @@
         <h2 class="header-buoy-portal">| Buoy Portal</h2>
     </div>
     <div class="profile-ctn">
-        <div class="menu-btn-container">
-            <img class="menu-btn" src="../assets/icon-menu.svg" alt="Menu" >
-        </div>
+        <!-- <div class="menu-btn-container">
+            <img class="menu-btn" src="../assets/icon-menu.svg" alt="Menu" (click)="toggleMenu()">
+        </div> -->
         <button class="create-profile-btn" routerLink="/register" *ngIf="!isLoggedIn">Create Profile</button>
         <button class="login-btn" routerLink="/login" *ngIf="!isLoggedIn">Login</button>
         <button class="logout-btn" routerLink="/buoyportal/all-lakes" *ngIf="isLoggedIn" (click)="logoutUser()"><img src="../assets/icon-logout.svg" class="icon-logout">Logout</button>

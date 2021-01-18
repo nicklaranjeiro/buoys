@@ -1,12 +1,76 @@
-// Buoy of the Day Video
-.buoyOfTheDay {
-  margin-top: 40px;
-  margin-left: 48px;
-  padding-right: 104px;
+// Favorites Section
+#mainText {
+  font-size: 14px;
+  color: var(--charcoal);
 }
 
-.botd-header-ctn,
+.fbl {
+  margin: 40px 16px;
+}
+
 .favoriteTitle {
+  display: flex;
+  align-items: center;
+}
+
+.favRectangle {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+}
+
+.buoyName {
+  font-size: 16px;
+  margin-right: 24px;
+}
+
+.buoyInformation-ctn {
+  display: flex;
+  align-items: center;
+}
+
+.weather-info-ctn {
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.temp-info-ctn {
+  display: flex;
+  align-items: center;
+}
+
+#weather {
+  width: 48px;
+  height: 48px;
+}
+
+.temp-icon-ctn {
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fbc02d;
+}
+
+#temp {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(101%);
+}
+
+
+// Buoy of the Day Video
+.buoyOfTheDay {
+  margin: 40px 16px;
+}
+
+.botd-header-ctn {
   display: flex;
   align-items: center;
 }
@@ -18,8 +82,7 @@
 
 .icon-buoy {
   margin-right: 8px;
-  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg)
-    brightness(83%) contrast(83%);
+  filter: invert(32%) sepia(65%) saturate(612%) hue-rotate(183deg) brightness(83%) contrast(83%);
 }
 
 .videoModal {
@@ -32,78 +95,83 @@
 .buoyName {
   font-size: 16px;
   margin: 16px 0;
-  margin-right: 10%;
-  margin-left: 10px;
   color: var(--charcoal);
-  vertical-align: super;
 }
 
 .botd-video {
   width: 100%;
-  height: 600px;
+  height: 320px;
 }
+
 
 // Bottom Paragraph Section
 .about {
-  margin-top: 40px;
-  margin-left: 48px;
-  margin-bottom: 56px;
-  padding-right: 104px;
-}
+  margin: 40px 16px;
+  }
+  
+  .aboutTitle {
+    font-size: 18px;
+    color: var(--Charcoal);
+  }
+  
+  .rectangle {
+    width: 60px;
+    height: 4px;
+    margin: 8px 0 16px 0;
+    background-image: linear-gradient(
+      to left,
+      var(--turquoise),
+      var(--cobalt)
+    );
+  }
+  
+  #mainText {
+    font-size: 14px;
+    color: var(--Charcoal);
+  }
 
-.aboutTitle {
-  font-size: 18px;
-  color: var(--Charcoal);
-}
 
-.rectangle {
-  width: 60px;
-  height: 4px;
-  margin: 8px 0 16px 0;
-  background-image: linear-gradient(to left, var(--turquoise), var(--cobalt));
-}
+  @media screen and (min-width: 800px){
+    .buoyOfTheDay {
+      margin-top: 40px;
+    }
+    
+    .botd-video {
+      width: 100%;
+      height: 480px;
+    }
 
-#mainText {
-  font-size: 14px;
-  color: var(--Charcoal);
-}
+    .about {
+      margin-top: 40px;
+      margin-bottom: 56px;
+    }
+  }
 
-.fbl {
-  margin: 40px 100px 40px 40px;
-}
 
-.favRectangle {
-  width: 100%;
-  height: 86px;
-  margin: 16px 0 0;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
-  background-color: var(--White);
-}
 
-.icon-fav {
-  width: 30px;
-  height: 30px;
-}
+  @media screen and (min-width: 1024px){
+    .fbl {
+      width: 80%;
+      margin: 40px 16px;
+      margin-left: 40px;
+    }
 
-#weather {
-  background-color: #333333;
-  border-radius: 60%;
-}
+    .buoyOfTheDay {
+      width: 80%;
+      margin-top: 40px;
+      margin-left: 48px;
+    }
+    
+    .botd-video {
+      width: 100%;
+      height: 600px;
+    }
 
-#temp {
-  background-color: #fbc02d;
-  border-radius: 60%;
-}
-
-#wind {
-  background-color: #3997b5;
-  border-radius: 60%;
-}
-
-::ng-deep .map-container {
-  width: 100% !important;
-  left: 0 !important;
-  height: 544px !important;
-}
+    .about {
+      width: 80%;
+      margin-top: 40px;
+      margin-left: 48px;
+      margin-bottom: 56px;
+    }
+    
+  }
