@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
   }
 
   routeToBuoy(buoy){
-    window.location.href = `/buoyportal/${buoy}`;
+    this.router.navigateByUrl(`/buoyportal/${buoy}`);
   }
 
   // closeMenu = () => {
